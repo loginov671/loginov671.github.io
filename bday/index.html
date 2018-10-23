@@ -12,6 +12,10 @@
 		</div>
 
 		<script>
+	   
+	   setinterval(output(),100);
+			
+	   function output() {		
            var today = new Date();
            var birthday = new Date(2019,0,11);
            var msTime = (birthday - today);
@@ -19,6 +23,7 @@
            var days = (Math.ceil(dTime));
            
            document.getElementById('number').innerHTML = days;
+	   }
 		</script>
 
 		<style>
