@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Ball</title>
+	</head>
+	<body>
+			<div id="ball"> </div>
+
+			<style>
+			
+		#ball {
+  		height: 20px;
+  		width: 20px;
+  		border-radius: 50%;
+  		position: relative;
+  		background: red;
+		}
+
+		</style>
+
+			<script>
+				
+				window.onload = function() {
+				
+				var ball = document.getElementById('ball');
+
+    			var vx= 20;
+			    var vy= 15;
+
+			    var posx = 1;
+	 			var posy = 1;
+
+			    var t = setInterval(move, 10);
+				   
+				function move()
+				{
+				    if ((posx >= window.innerWidth-27)||(posx <= -10)) {
+				        vx *= -1;
+				    }
+				    
+				    if ((posy >= window.innerHeight-27)||(posy <= -10)) {
+				        vy *= -1;
+				    }
+				    
+				    
+				    posy += vy;
+				    posx += vx;
+				    ball.style.left = posx +'px';
+				    ball.style.top = posy +'px';
+				}
+				};
+
+			</script>
+
+	</body>
+</html>

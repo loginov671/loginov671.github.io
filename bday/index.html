@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Birthday</title>
+	</head>
+	<body>
+		<div id='all'>
+		<h3 align="center">Дней до восемнадцатилетия:</h3>
+		<div id='image'>
+			<div><h1 id='number'></h1></div>
+		</div>
+		</div>
+
+		<script>
+           var today = new Date();
+           var birthday = new Date(2019,0,11);
+           var msTime = (birthday - today);
+           var dTime = (msTime/1000/60/60/24);
+           var days = (Math.ceil(dTime));
+           
+           document.getElementById('number').innerHTML = days;
+		</script>
+
+		<style>
+
+		    body {
+		    	padding: 10%;
+		    	background-color: #B5CD9E;
+		    }
+
+		    #all {
+		    	border-radius: 20%;
+		    	margin:auto;
+		    	background-color: #8E98B0;
+		    	width:256px;
+		    	height: 256px;
+		    	padding-top: 5%;
+		    	padding-right:3%; 
+		    	padding-left:3%;
+		    }
+			
+			#image {
+				margin: auto; 
+				width: 128px;
+				height: 128px;
+				background-image: url(calendar.png);
+				text-align: center;
+				line-height: 155px;
+			}
+
+		</style>
+
+	</body>
+</html>
